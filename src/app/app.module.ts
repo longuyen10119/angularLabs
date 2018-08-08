@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AccountComponent } from './account/account.component';
 import { RouterModule, Routes, Router } from '../../node_modules/@angular/router';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RouterModule, Routes, Router } from '../../node_modules/@angular/router
     AppComponent,
     LoginComponent,
     MenuComponent,
-    AccountComponent
+    AccountComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

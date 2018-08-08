@@ -20,7 +20,11 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     // console.log(this.username);
     if (this.username == "Long" && this.password == "123"){
-      this.router.navigateByUrl('/Account');
+      sessionStorage.setItem('userName', this.username);
+      sessionStorage.setItem('id', '1');
+      sessionStorage.setItem('birthDate', "29/12");
+      sessionStorage.setItem('Age', '29');
+      this.router.navigateByUrl('/Info');
     } else{
       alert('Username or password is incorrect');
     }

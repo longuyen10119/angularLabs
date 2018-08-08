@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-account',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private form:FormsModule) { }
 
   ngOnInit() {
   }
-
+  logOutUser(event){
+    event.preventDefault();
+    sessionStorage.clear();
+    this.router.navigateByUrl('/Info');
+  }
 }
